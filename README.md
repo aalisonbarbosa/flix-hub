@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# 🎬 FlixHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+FlixHub é um aplicativo web que permite pesquisar por filmes e séries e visualizar informações detalhadas sobre eles, incluindo dados como título, sinopse e elenco. Também é possível acessar a página de detalhes de atores e ver em quais produções eles participaram.
 
-Currently, two official plugins are available:
+O app foi desenvolvido com **React**, **Tailwind CSS** e **TypeScript**, consumindo dados diretamente da API do [The Movie Database (TMDB)](https://www.themoviedb.org/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Funcionalidades
 
-## Expanding the ESLint configuration
+- 🔍 Pesquisa de filmes e séries
+- 📄 Visualização de detalhes de filmes e séries (título, descrição, elenco, etc.)
+- 🧑 Navegação para página de detalhes de atores
+- 💅 Interface moderna, responsiva e rápida
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TMDB API](https://www.themoviedb.org/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Instalação
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/flixhub.git
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+# Acesse a pasta do projeto
+cd flixhub
+
+# Instale as dependências
+npm install
+
+# Configure sua chave da API TMDB em um arquivo .env.local
+VITE_TMDB_TOKEN=sua_chave_tmdb_aqui
+
+# Inicie o servidor de desenvolvimento
+npm run dev
